@@ -4,17 +4,17 @@ public class ArithmeticOperator {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 		
 		int time = scan.nextInt();
 		int second = time % 60;
 		int minute = (time / 60) % 60;
 		int hour = (time / 60) / 60;
 		
-		System.out.println(time + "ÃÊ´Â ");
-		System.out.println(hour + "½Ã°£, ");
-		System.out.println(minute + "ºÐ, ");
-		System.out.println(second + "ÃÊÀÔ´Ï´Ù.");
+		System.out.println(time + "ì´ˆëŠ” ");
+		System.out.println(hour + "ì‹œê°„, ");
+		System.out.println(minute + "ë¶„, ");
+		System.out.println(second + "ì´ˆìž…ë‹ˆë‹¤.");
 		scan.close();
 	}
 }
