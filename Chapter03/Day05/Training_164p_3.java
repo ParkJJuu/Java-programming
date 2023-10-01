@@ -20,5 +20,7 @@ public class Training_164p_3 {
 			}
 			System.out.println();				// \n 출력
 		}
+
+		scan.close();
 	}
 }
