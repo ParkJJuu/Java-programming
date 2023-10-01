@@ -23,6 +23,7 @@ public class Training_165p_4 {
 			}
 			System.out.println();					// \n 출력
 		}
-		
+
+		scan.close();
 	}
 }
