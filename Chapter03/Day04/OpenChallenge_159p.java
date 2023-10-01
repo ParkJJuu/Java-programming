@@ -1,10 +1,10 @@
 /*
- * ÀÛ¼º³¯Â¥ : 2023.09.29
- * ÀÛ¼ºÀÚ : ¾ç°»°·
- * ÀÛ¼º¸ñÀû : Ä«µå ¹øÈ£ ¸ÂÃß±â °ÔÀÓ(up&down°ÔÀÓ) - ¸íÇ° ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö 159P Open Challenge
+ * ì‘ì„±ë‚ ì§œ : 2023.09.29
+ * ì‘ì„±ì : ì–‘ê°±ê°¬
+ * ì‘ì„±ëª©ì  : ì¹´ë“œ ë²ˆí˜¸ ë§ì¶”ê¸° ê²Œì„(up&downê²Œì„) - ëª…í’ˆ ìë°” í”„ë¡œê·¸ë˜ë° 159P Open Challenge
  */
-import java.util.Scanner;	// Scanner Å¬·¡½º
-import java.util.Random;	// Random Å¬·¡½º
+import java.util.Scanner;	// Scanner í´ë˜ìŠ¤
+import java.util.Random;	// Random í´ë˜ìŠ¤
 
 public class OpenChallenge_159p {
 	public static void main(String[] args) {
@@ -12,55 +12,56 @@ public class OpenChallenge_159p {
 		while(true) {
 			
 			Random r = new Random();
-			int k = r.nextInt(100); 	// 0-99±îÁö ÀÓÀÇÀÇ Á¤¼ö »ı¼º
+			int k = r.nextInt(100); 	// 0-99ê¹Œì§€ ì„ì˜ì˜ ì •ìˆ˜ ìƒì„±
 			
 			Scanner scan = new Scanner(System.in);		
-			System.out.println("¼ö¸¦ °áÁ¤ÇÏ¿´½À´Ï´Ù. ¸ÂÃß¾î º¸¼¼¿ä");	
+			System.out.println("ìˆ˜ë¥¼ ê²°ì •í•˜ì˜€ìŠµë‹ˆë‹¤. ë§ì¶”ì–´ ë³´ì„¸ìš”");	
 			
-			int max = 99;	// ÃÖ´ë°ª 99·Î ÃÊ±âÈ­
-			int min = 0;	// ÃÖ¼Ú°ª 0À¸·Î ÃÊ±âÈ­
+			int max = 99;	// ìµœëŒ€ê°’ 99ë¡œ ì´ˆê¸°í™”
+			int min = 0;	// ìµœì†Ÿê°’ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 			System.out.println(min + "-" + max);
 			
-			int i = 1;		// °ÔÀÓ È½¼ö Ä«¿îÆ®
+			int i = 1;		// ê²Œì„ íšŸìˆ˜ ì¹´ìš´íŠ¸
 			
 			while(true) {
 				System.out.print(i + ">>");
-				int num = scan.nextInt();	// »ç¿ëÀÚ ¼ö ÀÔ·Â¹Ş±â
-				i++;	// ¹İº¹µÉ ¶§ ¸¶´Ù i°ª 1¾¿ Áõ°¡
+				int num = scan.nextInt();	// ì‚¬ìš©ì ìˆ˜ ì…ë ¥ë°›ê¸°
+				i++;	// ë°˜ë³µë  ë•Œ ë§ˆë‹¤ iê°’ 1ì”© ì¦ê°€
 				
-				if (num < k) {	// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ö°¡ Ä«µåÀÇ ¼öº¸´Ù ³·À» °æ¿ì
-					System.out.println("´õ ³ô°Ô");
+				if (num < k) {	// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ˜ê°€ ì¹´ë“œì˜ ìˆ˜ë³´ë‹¤ ë‚®ì„ ê²½ìš°
+					System.out.println("ë” ë†’ê²Œ");
 					System.out.println(num + "-" + max);
 					min = num;
 					continue;
 				}
-				else if (num > k) {	// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ö°¡ Ä«µåÀÇ ¼öº¸´Ù ³ôÀ» °æ¿ì
-					System.out.println("´õ ³·°Ô");
+				else if (num > k) {	// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ˜ê°€ ì¹´ë“œì˜ ìˆ˜ë³´ë‹¤ ë†’ì„ ê²½ìš°
+					System.out.println("ë” ë‚®ê²Œ");
 					System.out.println(min + "-" + num);
 					max = num;
 					continue;
 				}
-				else {	// Ä«µåÀÇ ¼ö¸¦ ¸ÂÃèÀ» °æ¿ì
-					System.out.println("¸Â¾Ò½À´Ï´Ù.");
-					break;	// ¹«ÇÑ ¹İº¹¹® Á¾·á
+				else {	// ì¹´ë“œì˜ ìˆ˜ë¥¼ ë§ì·„ì„ ê²½ìš°
+					System.out.println("ë§ì•˜ìŠµë‹ˆë‹¤.");
+					break;	// ë¬´í•œ ë°˜ë³µë¬¸ ì¢…ë£Œ
 				}
 			}
 			
-			System.out.print("´Ù½ÃÇÏ½Ã°Ú½À´Ï±î(y/n)>>"); // °ÔÀÓ Àç½ÃÀÛ ÁúÀÇ
+			System.out.print("ë‹¤ì‹œí•˜ì‹œê² ìŠµë‹ˆê¹Œ(y/n)>>"); // ê²Œì„ ì¬ì‹œì‘ ì§ˆì˜
 			String text = scan.next();
-			if (text.equals("n")) {	// »ç¿ëÀÚ°¡ "n"À» ÀÔ·ÂÇßÀ» °æ¿ì
+			if (text.equals("n")) {	// ì‚¬ìš©ìê°€ "n"ì„ ì…ë ¥í–ˆì„ ê²½ìš°
 				scan.close();
-				break;				// ¹«ÇÑ ¹İº¹¹® Á¾·á
+				break;				// ë¬´í•œ ë°˜ë³µë¬¸ ì¢…ë£Œ
 			}
-			else if (text.equals("y")) {	// »ç¿ëÀÚ°¡ "y"¸¦ ÀÔ·ÂÇßÀ» °æ¿ì
-				continue;					// °ÔÀÓ Àç½ÃÀÛ
+			else if (text.equals("y")) {	// ì‚¬ìš©ìê°€ "y"ë¥¼ ì…ë ¥í–ˆì„ ê²½ìš°
+				continue;					// ê²Œì„ ì¬ì‹œì‘
 			}
-			else {	// »ç¿ëÀÚ°¡ n,yÀ» ÀÔ·ÂÇÏÁö ¾Ê°í Àß ¸ø ÀÔ·ÂÇßÀ» °æ¿ì
-				System.out.println("Àß ¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
-				System.out.println("°ÔÀÓÀ» ´Ù½Ã ½ÃÀÛÇÏ¼¼¿ä.");
-				break;	// ¹«ÇÑ ¹İº¹¹® Á¾·á
+			else {	// ì‚¬ìš©ìê°€ n,yì„ ì…ë ¥í•˜ì§€ ì•Šê³  ì˜ ëª» ì…ë ¥í–ˆì„ ê²½ìš°
+				System.out.println("ì˜ ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
+				System.out.println("ê²Œì„ì„ ë‹¤ì‹œ ì‹œì‘í•˜ì„¸ìš”.");
+				scan.close();
+				break;	// ë¬´í•œ ë°˜ë³µë¬¸ ì¢…ë£Œ
 			}
 		}
-		System.out.println("°ÔÀÓÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");	// °ÔÀÓ Á¾·á
+		System.out.println("ê²Œì„ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");	// ê²Œì„ ì¢…ë£Œ
 	}
 }
